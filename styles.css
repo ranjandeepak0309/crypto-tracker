@@ -1,0 +1,136 @@
+*{
+    font-family: "Mosterrat",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+nav{
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(194, 155, 155);
+    border-bottom: 10px solid rgb(150, 85, 85);
+    padding: 0px 20px;
+
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    
+}
+.nav-link:hover{
+    color: rgb(207, 211, 211);
+}
+.title{
+    color: yellow;
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.right-nav{
+    display: flex;
+    gap:  50px; /*it provide horizontal gap*/
+    align-items: center;
+
+
+}
+#search-box{
+    height: 36px;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  margin-right: 5px;
+
+}
+.search-icon{
+    font-size: 20px;
+    color: white;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 120px;
+}
+table{
+    width: 95%;
+    border-collapse:collapse;/*before it the border is devided in boxes now it all synced*/
+
+}
+th,td{
+    border: 1px solid #ddd;
+    padding:8px;
+    text-align: center;
+}
+th{
+    background-color: #f4f4f4;
+}
+.shimmer-container{
+    /* height: 100vh; */
+    position:absolute ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    display: none;
+    border: 1px solid red;
+}
+.shimmer{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* we can get more animated css by searching website ---> animated loader in css-->css loader */
+    background: conic-gradient(#0000 10%,gold);
+     -webkit-mask: radial-gradient(farthest-side, #0000 calc(100%-9px),#000 0);
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    to{
+        transform: rotate(1turn);
+    }
+    
+}
+#pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0px;
+}
+.page-button{
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+/* .page-button.acticve{
+    background-color: #4caf50;
+    color: white;
+    border: none;
+} */
+ .page-button.active{
+    background-color: #4caf50;
+    color: white;
+    border: none;
+ }
